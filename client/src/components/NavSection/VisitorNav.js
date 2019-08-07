@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { Nav, Navbar, Button } from "reactstrap"
+import { Nav, Navbar, NavLink, NavbarBrand, Button } from "reactstrap"
 
 class VisitorNav extends Component {
     render() {
         return (
             <>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="/">The BIG Eats Eatery</Navbar.Brand>
+                    <NavbarBrand href="/">The BIG Eats Eatery</NavbarBrand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/menu">Menu</Nav.Link>
-                        {/* <Nav.Link href="/orders">Order</Nav.Link> */}
+                        <NavLink href="/menu">Menu</NavLink>
+                        {/* <NavLink href="/orders">Order</NavLink> */}
                     </Nav>
                 </Navbar>
             </>
