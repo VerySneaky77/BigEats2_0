@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { Nav, Navbar, Button } from "reactstrap"
+import { Nav, Navbar, NavLink, NavbarBrand, Button } from "reactstrap"
 
 class AdminNav extends Component {
     render() {
         return (
             <>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="/admin">Home Control Panel</Navbar.Brand>
+                    <NavbarBrand href="/admin">Home Control Panel</NavbarBrand>
                     <Nav className="mr-auto">
-                        {/* <Nav.Link href="/revenue">Revenue Reports</Nav.Link> */}
-                        {/*   <Nav.Link href="/orders/find">Orders</Nav.Link> */}
+                        {/* <NavLink href="/revenue">Revenue Reports</NavLink> */}
+                        {/*   <NavLink href="/orders/find">Orders</NavLink> */}
                     </Nav>
                 </Navbar>
             </>
