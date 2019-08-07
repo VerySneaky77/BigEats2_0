@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, ListGroup, Container, Button } from "react-bootstrap/es";
+import { Jumbotron, ListGroup, Container, Button } from "reactstrap";
 import "./visitor.css"
 
 class VisitorMenu extends Component {

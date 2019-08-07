@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import InfoWindow from "./InfoWindow";
-import { Jumbotron, Container, Row, Col, Modal, ListGroup, Form, Button } from "react-bootstrap/es/";
+import { Jumbotron, Container, Row, Col, Modal, ListGroup, Form, Button } from "reactstrap";
+import OrderRoute from "../../utils/OrderRoute";
 import "./visitor.css";
-import OrderRoute from "../../../utils/OrderRoute";
 
 class VisitorOrders extends Component {
     state = {

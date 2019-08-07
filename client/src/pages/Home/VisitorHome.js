@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import { Jumbotron, Image, Container, Row, Col } from "react-bootstrap/es";
+import { Jumbotron, Media, Container, Row, Col } from "reactstrap";
 import "./visitor.css";
-const pizza = require('../../../images/pizza.jpg');
-const burger = require('../../../images/burger.jpg');
-const chicken = require('../../../images/chicken.jpeg');
-const hotdog = require('../../../images/hot dog.jpg');
+
+const pizza = require('../../images/pizza.jpg');
+const burger = require('../../images/burger.jpg');
+const chicken = require('../../images/chicken.jpeg');
+const hotdog = require('../../images/hot dog.jpg');
 
 class VisitorHome extends Component {
     render() {
         return (
             <>
-                <Image src={pizza} fluid />
+                <Media src={pizza} fluid />
 
                 <Jumbotron fluid className="tranparent" id="ptag">
                     <Container>
@@ -22,7 +23,7 @@ class VisitorHome extends Component {
                 <Jumbotron fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
-                            <Image src={burger} className="image" fluid />
+                            <Media src={burger} className="image" fluid />
                         </div>
                         <p className="discriptiion">
                             Try one of our
@@ -35,7 +36,7 @@ class VisitorHome extends Component {
                 <Jumbotron fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
-                            <Image src={chicken} className="image" fluid />
+                            <Media src={chicken} className="image" fluid />
                         </div>
                         <p className="discriptiion">
                             Start your summer
@@ -47,7 +48,7 @@ class VisitorHome extends Component {
                 <Jumbotron fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
-                            <Image src={hotdog} className="image" fluid />
+                            <Media src={hotdog} className="image" fluid />
                         </div>
                         <p className="discriptiion">
                             Classic and custome made

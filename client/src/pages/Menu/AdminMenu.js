@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import MenuRoute from "../../../utils/MenuRoute";
-import { Jumbotron, ListGroup } from "react-bootstrap/es/";
-import DeleteBtn from "../../DeleteBtn";
-import AddForm from "../../AddForm";
-import API from "../../../utils/API";
+import MenuRoute from "../../utils/MenuRoute";
+import { Jumbotron, ListGroup } from "reactstrap";
+import DeleteBtn from "../../components/DeleteBtn";
+import AddForm from "../../components/AddForm";
+// import API from "../../../utils/API";
 
 class AdminMenu extends Component {
   state = {

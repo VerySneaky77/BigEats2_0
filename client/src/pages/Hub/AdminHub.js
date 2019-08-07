@@ -5,8 +5,8 @@ import Home from "../Home/AdminHome";
 import Orders from "../Orders/AdminOrders";
 import Menu from "../Menu/AdminMenu";
 import NoPath from "../NoPath";
-import Nav from "../../common/NavSection/AdminNav";
-import Footer from "../../common/Footer/AdminFooter"
+import Nav from "../../components/NavSection/AdminNav";
+import Footer from "../../components/Footer"
 
 class AdminHub extends Component {
     state = {}
@@ -21,7 +21,7 @@ class AdminHub extends Component {
                     <Route exact path="/admin/menu" component={Menu} />
                     <Route component={NoPath} />
                 </Switch>
-                <Route component={Footer} />
+                <Route component={Footer.Admin} />
             </>
         );
     }
