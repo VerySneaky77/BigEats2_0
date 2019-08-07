@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // Routes used to make orders
-import VisitorRoute from "../../../utils/VisitorRoute";
-import OrderRoute from "../../../utils/OrderRoute";
-import MenuRoute from "../../../utils/MenuRoute";
+import VisitorRoute from "../../utils/VisitorRoute";
+import OrderRoute from "../../utils/OrderRoute";
+import MenuRoute from "../../utils/VisitorRoute";
 import Home from "../Home/VisitorHome";
 import Orders from "../Orders/VisitorOrders";
 import Menu from "../Menu/VisitorMenu";
 import NoPath from "../NoPath";
-import Nav from "../../common/NavSection/VisitorNav";
-import Footer from "../../common/Footer/VisitorFooter";
+import Nav from "../../components/NavSection/VisitorNav";
+import Footer from "../../components/Footer";
 
 class VisitorHub extends Component {
     // This state allows the site to keep temporary track of the user's ordered items
@@ -137,7 +137,7 @@ class VisitorHub extends Component {
                     } />
                     <Route component={NoPath} />
                 </Switch>
-                <Route component={Footer} />
+                <Route component={Footer.Visitor} />
             </>
         );
     }

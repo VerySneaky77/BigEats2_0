@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../Grid";
-import Jumbotron from "../../Jumbotron";
+import { Col, Row, Container } from "../../components/Grid";
+import Jumbotron from "../../components/Jumbotron";
 
 class AdminMenu extends Component {
   state = {};
