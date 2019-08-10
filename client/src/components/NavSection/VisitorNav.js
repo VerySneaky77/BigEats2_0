@@ -1,18 +1,35 @@
 import React, { Component } from "react";
-import { Nav, Navbar, NavLink, NavbarBrand, Button } from "reactstrap"
+import { Collapse, Nav, Navbar, NavItem, NavLink, NavbarBrand, NavbarToggler } from "reactstrap"
 
 class VisitorNav extends Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+
+        this.state = {
+            isOpen: false
+        }
+    }
+
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
+
     render() {
         return (
-            <>
-                <Navbar bg="dark" variant="dark">
-                    <NavbarBrand href="/">The BIG Eats Eatery</NavbarBrand>
-                    <Nav className="mr-auto">
-                        <NavLink href="/menu">Menu</NavLink>
-                        {/* <NavLink href="/orders">Order</NavLink> */}
+            <Navbar color="dark" dark expand="md">
+                <NavbarBrand href="/">The BIG Eats Eatery</NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={!this.state.collapsed} navbar>
+                    <Nav className="ml-auto my-4" navbar>
+                        <NavItem><NavLink href="/menu">Menu</NavLink></NavItem>
+                        <NavItem><NavLink href="/orders">Order</NavLink></NavItem>
                     </Nav>
-                </Navbar>
-            </>
+                </Collapse>
+            </Navbar>
         );
     };
 }

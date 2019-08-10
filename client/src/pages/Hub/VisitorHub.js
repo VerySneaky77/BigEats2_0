@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // Routes used to make orders
 import VisitorRoute from "../../utils/VisitorRoute";
 import OrderRoute from "../../utils/OrderRoute";
-import MenuRoute from "../../utils/VisitorRoute";
+import MenuRoute from "../../utils/MenuRoute";
 import Home from "../Home/VisitorHome";
 import Orders from "../Orders/VisitorOrders";
 import Menu from "../Menu/VisitorMenu";
