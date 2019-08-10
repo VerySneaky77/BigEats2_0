@@ -18,9 +18,7 @@ const menuSchema = new Schema({
       "Price must be a positive number."
     ]
   },
-  category: String,
-  startTime : Date,
-  endTime : Date
+  category: String
 });
 
 const Menu = mongoose.model("menu-item", menuSchema);

@@ -65,3 +65,12 @@
 .image-box {
     width: 5;
 }
+
+.carousel {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    background-color: black
+}
