@@ -7,11 +7,8 @@ import "./style.css"
 export default function Footer() {
     return (
         <Jumbotron style={{ marginBottom: "0px", backgroundColor: "red", height: "75px" }}>
-            <Container>
-                <NavbarBrand style={{ color: "white", align: "center" }}>Created by Carlos and Alapan</NavbarBrand>
-            </Container>
-
             <div>
+                <p style={{ color: "black", align: "center" }}>Created by Alapan Bhakat and Carlos Quinto</p>
                 <a className="atg2" href="/../Users/Bryce/code/projects/project3_bootcamp/client/src/components/pages/Home/AdminHome" target="_blank">github.com</a>
             </div>
             <Link to="/admin">Admin Portal</Link>
