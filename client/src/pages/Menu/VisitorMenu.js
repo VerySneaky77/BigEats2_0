@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Jumbotron, ListGroup, Container, Button } from "reactstrap";
-import "./visitor.css"
+import { Jumbotron, ListGroup, ListGroupItem, Container, Button } from "reactstrap";
+import "./style.css"
 
 class VisitorMenu extends Component {
     state = {
@@ -35,11 +35,11 @@ class VisitorMenu extends Component {
                     <Container>
                         <ListGroup>
                             {this.props.items.map(item => (
-                                <ListGroup.Item key={item._id}>
+                                <ListGroupItem key={item._id}>
                                     <h3 className="item-head">{item.name}</h3>
                                     <p className="item-ingredients">{item.ingredients}</p>
                                     <p className="item-description">{item.description}</p>
-                                </ListGroup.Item>
+                                </ListGroupItem>
                             ))}
                         </ListGroup>
                     </Container>
