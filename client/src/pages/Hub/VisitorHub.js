@@ -112,7 +112,7 @@ class VisitorHub extends Component {
                 <Route component={Nav} />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    {/* <Route exact path="/orders" render={(props) =>
+                    <Route exact path="/orders" render={(props) =>
                         <Orders
                             {...props}
                             orders={this.state.orders}
@@ -125,7 +125,7 @@ class VisitorHub extends Component {
                             onSubmit={this.onSubmit}
                             onChange={this.handleInputChange}
                         />
-                    } /> */}
+                    } />
                     <Route exact path="/menu" render={(props) =>
                         <Menu
                             {...props}

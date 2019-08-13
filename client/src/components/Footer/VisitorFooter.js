@@ -6,11 +6,11 @@ import "./style.css"
 
 export default function Footer() {
     return (
-        <Jumbotron>
-            <div>
-                <p style={{ color: "black", align: "center" }}>Created by Alapan Bhakat and Carlos Quinto</p>
-                <a className="atg2" href="/../Users/Bryce/code/projects/project3_bootcamp/client/src/components/pages/Home/AdminHome" target="_blank">github.com</a>
-            </div>
-        </Jumbotron>
+        <div id="footer">
+            <Container>
+                <p>Created by Alapan Bhakat and Carlos Quinto</p>
+                <a className="atg2" href="https://github.com/VerySneaky77/BigEats2_0" target="_blank">github.com</a>
+            </Container>
+        </div>
     );
 }

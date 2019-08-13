@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Media, Container, Row, Col } from "reactstrap";
+import { Jumbotron, Media, Container, Card, Row, Col } from "reactstrap";
 import Carousel from "../../components/Carousel";
 import "./style.css";
 
@@ -22,7 +22,7 @@ class VisitorHome extends Component {
                         </p>
                     </Container>
                 </Jumbotron>
-                <Jumbotron fluid className="tranparentbox">
+                <Card fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
                             <Media src={burger} className="image" fluid />
@@ -34,8 +34,8 @@ class VisitorHome extends Component {
                             new favorite!
                         </p>
                     </Container>
-                </Jumbotron>
-                <Jumbotron fluid className="tranparentbox">
+                </Card>
+                <Card fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
                             <Media src={chicken} className="image" fluid />
@@ -46,8 +46,8 @@ class VisitorHome extends Component {
                             Chicken
                         </p>
                     </Container>
-                </Jumbotron>
-                <Jumbotron fluid className="tranparentbox">
+                </Card>
+                <Card fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
                             <Media src={hotdog} className="image" fluid />
@@ -57,7 +57,7 @@ class VisitorHome extends Component {
                             hotdogs
                         </p>
                     </Container>
-                </Jumbotron> 
+                </Card> 
             </>
         )
     }
