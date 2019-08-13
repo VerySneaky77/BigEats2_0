@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { UncontrolledCarousel } from 'reactstrap';
+import './style.css';
 
 const items = [
   {
