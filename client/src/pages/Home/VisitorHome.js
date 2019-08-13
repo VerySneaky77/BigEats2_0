@@ -57,7 +57,7 @@ class VisitorHome extends Component {
                             hotdogs
                         </p>
                     </Container>
-                </Jumbotron>
+                </Jumbotron> 
             </>
         )
     }
