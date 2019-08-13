@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Jumbotron, Media, Container, Row, Col } from "reactstrap";
 import Carousel from "../../components/Carousel";
-import "./visitor.css";
+import "./style.css";
 
 const pizza = require('../../images/pizza.jpg');
 const burger = require('../../images/burger.jpg');
@@ -12,10 +12,9 @@ class VisitorHome extends Component {
     render() {
         return (
             <>
-                <Media src={pizza} fluid />
-
-                <Carousel/>
-
+                <div className="carousel-container">
+                    <Carousel className="carousel"/>
+                </div>
                 <Jumbotron fluid className="tranparent" id="ptag">
                     <Container>
                         <p>
