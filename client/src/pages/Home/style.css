@@ -18,7 +18,7 @@
 .tranparentbox:hover{
     box-shadow: 8px 8px 20px rgb(56, 56, 56);
     transition: all 1s ease;
-    background: rgb(170, 170, 170);
+    background: lightcoral;
     transform: scale(1);
 }
 .tranparent{
@@ -27,13 +27,14 @@
     filter: alpha(opacity=60);
 }
 #ptag{
-    font-size: 30px;
+    font-size: 45px;
     font-style: italic;
-    font-weight: bolder;
-    color: white;
+    font-weight: normal;
+    color: red;
     text-align: center;
-    background-color: #000000;
+    background-color: black;
 }
+
 .image{
     float: right;
     width: 300px;
@@ -41,7 +42,8 @@
     margin: 5px;
     text-align: center;
 }
-.middle{
+
+/* .middle{
     margin: 20px auto;
     border: 3px solid rgb(185, 185, 185);
     border-radius:  4px;
@@ -51,10 +53,9 @@
     font-size: 10px;
     padding: 15px 20px;
     font-family: Asap, sans-serif;
-    position: absolute;
-    
-    
-}
+    position: absolute;    
+} */
+
 .discriptiion{
     font-family: 'Delius Swash Caps', cursive;
     float: center;
@@ -75,6 +76,6 @@
     background-color: black
 }
 
-.carousel-item {
-    color: black
+body {
+    background-color: black
 }

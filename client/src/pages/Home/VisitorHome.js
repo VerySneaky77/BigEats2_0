@@ -22,7 +22,7 @@ class VisitorHome extends Component {
                         </p>
                     </Container>
                 </Jumbotron>
-                {/* <Jumbotron fluid className="tranparentbox">
+                <Jumbotron fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
                             <Media src={burger} className="image" fluid />
@@ -57,7 +57,7 @@ class VisitorHome extends Component {
                             hotdogs
                         </p>
                     </Container>
-                </Jumbotron> */}
+                </Jumbotron> 
             </>
         )
     }
