@@ -1,0 +1,8 @@
+.nav-area {
+    margin-bottom: 12px;
+    box-shadow: 0 3px 6px slategray, 0 3px 6px slategray;
+}
+
+.nav-box {
+    background-color: slategray;
+}
