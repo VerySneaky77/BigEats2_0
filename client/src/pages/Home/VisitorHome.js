@@ -53,6 +53,8 @@ class VisitorHome extends Component {
                         <h1>Hours:</h1>
                         <p className="discriptiion">
                             Mon-Fri: 12:00 PM - 12:00 AM
+                        </p>
+                        <p className="discriptiion">
                             Sat-Sun: 10:00 AM - 2:00 AM
                         </p>
                         <h1>Location:</h1>
