@@ -23,8 +23,9 @@
     font-size: 45px;
     font-style: italic;
     font-weight: normal;
-    color: red;
+    color: black;
     text-align: center;
+    background-color: red
 }
 
 .image{
@@ -68,10 +69,6 @@
     background-color: black
 }
 
-.jumbotron {
-    opacity: 0;
-}
-
-body {
+#root {
     background-color: black
 }
