@@ -4,14 +4,13 @@ import "./style.css"
 
 class VisitorMenu extends Component {
     state = {
-        allTypes: ["sandwich", "appetizer", "beverage", "platter"],
+        allTypes: ["Sandwich", "Platter", "Pizza"],
         name: "",
         ingredients: "",
         description: "",
         price: "",
         type: "",
-        itemRow: [],
-        tempOrders: this.props.orders
+        itemRow: []
     };
 
     componentDidMount() {
@@ -33,15 +32,20 @@ class VisitorMenu extends Component {
                 </Container>
                 {this.props.items.length ? (
                     <Container>
-                        <ListGroup>
-                            {this.props.items.map(item => (
-                                <ListGroupItem key={item._id}>
-                                    <h3 className="item-head">{item.name}</h3>
-                                    <p className="item-ingredients">{item.ingredients}</p>
-                                    <p className="item-description">{item.description}</p>
-                                </ListGroupItem>
-                            ))}
-                        </ListGroup>
+                        {this.state.allTypes.map(types => (
+                            <ListGroup>
+                                <h2 className="menu-group-header">{types}</h2>
+                                {this.props.items.map(item => (
+                                    types === item.categories ? (
+                                        <ListGroupItem key={item._id}>
+                                            <h3 className="item-head">{item.name}</h3>
+                                            <p className="item-ingredients">{item.ingredients}</p>
+                                            <p className="item-description">{item.description}</p>
+                                        </ListGroupItem>
+                                    ) : null
+                                ))}
+                            </ListGroup>
+                        ))}
                     </Container>
                 ) : (
                         <h3>Our menu is currently unavailable for viewing.</h3>

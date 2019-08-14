@@ -37,12 +37,12 @@ class VisitorHub extends Component {
         this.setState(this.state.visitor, { phone: inPhone });
     };
 
-    onSubmitNewVisitor = (e, inName, inPhone) => {
+    onSubmitNewVisitor = (inName, inPhone) => {
         this.loadSignIn(inName, inPhone);
         this.postVisitor();
     }
 
-    onSignReturnVisitor = (e, inName, inPhone) => {
+    onSignReturnVisitor = (inName, inPhone) => {
         this.loadSignIn(inName, inPhone);
         this.getVisitor();
     }
