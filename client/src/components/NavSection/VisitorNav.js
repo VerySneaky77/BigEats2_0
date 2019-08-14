@@ -20,11 +20,11 @@ class VisitorNav extends Component {
 
     render() {
         return (
-            <Navbar color="dark" dark expand="md">
+            <Navbar expand="md" dark className="nav-area">
                 <NavbarBrand href="/">The BIG Eats Eatery</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={!this.state.collapsed} navbar>
-                    <Nav className="ml-auto my-4" navbar>
+                    <Nav className="ml-auto nav-box" navbar>
                         <NavItem><NavLink href="/menu">Menu</NavLink></NavItem>
                         <NavItem><NavLink href="/orders">Order</NavLink></NavItem>
                     </Nav>
