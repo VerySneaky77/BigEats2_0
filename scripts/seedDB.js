@@ -25,23 +25,17 @@ const itemsSeed = [
     price : 8.0
   },
   {
-    name: "Cheese Burger",
-    ingredients: "Lettuce, onion, sesame seed bun, beef patty",
-    description: "A classic sandwich favorite, customized to order.",
+    name: "Pizza",
+    ingredients: "Delicious cheese pizza with thin crust.",
+    description: "A classic cheese pizza, customized to order.",
     price : 8.0
   },
   {
-    name: "Doble Burger",
-    ingredients: "Meat, onion, sesame seed bun, beef patty",
-    description: "A dobble delicious burger favorite, customized to order.",
+    name: "Hotdog",
+    ingredients: "Beef sausage, onion, regular bun",
+    description: "A classic hotdog favorite, customized to order.",
     price : 8.0
   },
-  {
-    name: "Steak",
-    ingredients: "3/4 roasbeef sesame seed bun, beef patty",
-    description: "8 oz of your favorite, customized to order.",
-    price : 8.0
-  }
 ];
 
 Item.remove({})
