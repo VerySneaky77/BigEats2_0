@@ -3,18 +3,18 @@ import Axios from "axios";
 // Order apis
 export default {
   getOrders(id) {
-    return Axios.get("api/orders/" + id);
+    return Axios.get("/orders/" + id);
   },
   postOrders(id) {
-    return Axios.post("api/orders/" + id);
+    return Axios.post("/orders/" + id);
   },
   getAdminOrders() {
-    return Axios.get("/api/admin/orders");
+    return Axios.get("/admin/orders");
   },
   postAdminOrders(id) {
-      return Axios.post("/api/admin/orders/" + id);
+      return Axios.post("/admin/orders/" + id);
   },
   deleteAdminOrders(id) {
-    return Axios.delete("/api/admin/orders/" + id);
+    return Axios.delete("/admin/orders/" + id);
   }
 }
