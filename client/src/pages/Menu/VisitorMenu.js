@@ -28,9 +28,9 @@ class VisitorMenu extends Component {
     render() {
         return (
             <>
-                <Jumbotron>
-                    <h1>The BIG Menu</h1>
-                </Jumbotron>
+                <Container>
+                    <h1 className="menu-title">The BIG Menu</h1>
+                </Container>
                 {this.props.items.length ? (
                     <Container>
                         <ListGroup>
