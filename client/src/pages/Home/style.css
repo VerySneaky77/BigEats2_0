@@ -18,19 +18,15 @@
     background: lightcoral;
     transform: scale(1);
 }
-.tranparent{
-    background-color: #000000;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-}
+
 
 #ptag{
     font-size: 45px;
     font-style: italic;
     font-weight: normal;
-    color: red;
+    color: black;
     text-align: center;
-    background-color: black;
+    background-color: red
 }
 
 .image{
@@ -74,6 +70,6 @@
     background-color: black
 }
 
-body {
+#root {
     background-color: black
 }
