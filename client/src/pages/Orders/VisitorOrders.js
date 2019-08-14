@@ -20,18 +20,13 @@ class VisitorOrders extends Component {
 
     // Populate the Orders section of the visitor-side site
     loadOrders = () => {
-        OrderRoute.getOrders(this.state._id)
+        OrderRoute.getOrdersByPhone(this.props.phone)
             .then(res => {
                 this.setState({ tempOrder: res.data });
                 this.props.updateOrder(this.state.tempOrder);
             })
             .catch(err => console.log(err));
     };
-
-    // User sign in
-
-    // User sign new
-
 
     render() {
         return (
