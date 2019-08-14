@@ -36,8 +36,11 @@ class VisitorOrders extends Component {
                 </Container>
                 {this.props.phone === 0 ? (
                     <Container>
-                        <VisitorWindow.SignIn />
-                        <VisitorWindow.SignNew />
+                        <VisitorWindow.SignIn
+                            onSignIn={this.props.onSignReturnVisitor}
+                        />
+                        <VisitorWindow.SignNew 
+                            onRegister={this.props.onSignReturnVisitor}/>
                     </Container>
                 ) : (
                         <Container>

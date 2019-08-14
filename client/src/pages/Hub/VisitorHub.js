@@ -113,6 +113,8 @@ class VisitorHub extends Component {
                             name={this.state.visitor.name}
                             phone={this.state.visitor.phone}
                             orders={this.state.orders}
+                            onSignReturnVisitor={this.onSignReturnVisitor}
+                            onSubmitNewVisitor={this.onSubmitNewVisitor}
                         />
                     }
                     />
