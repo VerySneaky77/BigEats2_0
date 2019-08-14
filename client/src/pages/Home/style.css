@@ -17,15 +17,15 @@
     transition: all 1s ease;
     background: red;
     transform: scale(1);
+    box-shadow: 0 3px 6px rgb(190, 0, 0), 0 3px 6px rgb(190, 0, 0);
 }
 
-#ptag{
+.head-text{
     font-size: 45px;
     font-style: italic;
     font-weight: normal;
     color: black;
     text-align: center;
-    background-color: red
 }
 
 .image{
@@ -61,12 +61,12 @@
 }
 
 .carousel {
-    max-width: 880px;
     margin: 0 auto;
 }
 
 .carousel-container {
-    background-color: black
+    background-color: black;
+    height: 600px;
 }
 
 #root {
