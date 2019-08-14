@@ -2,11 +2,11 @@ import Axios from "axios";
 
 // Order apis
 export default {
-  getOrders(id) {
-    return Axios.get("/orders/" + id);
+  getOrdersByPhone(phone) {
+    return Axios.get("/orders/" + phone);
   },
-  postOrders(id) {
-    return Axios.post("/orders/" + id);
+  postOrders() {
+    return Axios.post("/orders");
   },
   getAdminOrders() {
     return Axios.get("/admin/orders");

@@ -14,17 +14,13 @@ import Footer from "../../components/Footer";
 class VisitorHub extends Component {
     // This state allows the site to keep temporary track of the user's ordered items
     state = {
-        nameFirst: "",
-        nameLast: "",
-        _id: "",
-        phone: "",
+        visitor: {
+            name: "",
+            phone: 0
+        },
         orders: [],
         items: []
     };
-
-    componentDidMount() {
-        this.getVisitor();
-    }
 
     loadMenu = () => {
         MenuRoute.getMenu()
@@ -36,13 +32,39 @@ class VisitorHub extends Component {
             .catch(err => console.log(err));
     };
 
+    loadSignIn = (inName, inPhone) => {
+        this.setState(this.state.visitor, { name: inName });
+        this.setState(this.state.visitor, { phone: inPhone });
+    };
+
+    onSubmitNewVisitor = (e, inName, inPhone) => {
+        this.loadSignIn(inName, inPhone);
+        this.postVisitor();
+    }
+
+    onSignReturnVisitor = (e, inName, inPhone) => {
+        this.loadSignIn(inName, inPhone);
+        this.getVisitor();
+    }
+
     getVisitor = () => {
-        VisitorRoute.getInfoByPhone(this.state.phone)
+        VisitorRoute.getVisitorInfoByPhone(this.state.visitor.phone)
             .then(res => {
                 this.setState({ visitor: res.data });
             })
             .catch(err => console.log(err));
     };
+
+    postVisitor = () => {
+        let visitor = this.state.visitor;
+
+        VisitorRoute.postVisitorInfo(visitor)
+            .then(res => {
+                console.log("Data uploaded");
+                console.log(res.data);
+            })
+            .catch(err => console.log(err));
+    }
 
     addToOrder = (e, newItem) => {
         let tempArray = this.state.orders;
@@ -73,32 +95,6 @@ class VisitorHub extends Component {
             .catch(err => console.log(err));
     }
 
-    sendVisitor = () => {
-        let visitor = {
-            nameFirst: this.state.nameFirst,
-            nameLast: this.state.nameLast,
-            phone: this.state.phone
-        }
-
-        VisitorRoute.postInfoById(visitor)
-            .then(res => {
-                console.log("Data uploaded");
-            })
-            .catch(err => console.log(err));
-    }
-
-    onSubmit = (e, phone) => {
-        e.preventDefault();
-        VisitorRoute.postInfoByPhone(phone)
-            .then(res => {
-                this.setState({
-                    nameFirst: res.data.nameFirst,
-                    nameLast: res.data.nameLast,
-                    phone: res.data.phone
-                })
-            })
-    };
-
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -112,10 +108,16 @@ class VisitorHub extends Component {
                 <Route component={Nav} />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/orders" />
-                    <Route exact path="/menu" render={(props) =>
+                    <Route exact path="/orders" render={() =>
+                        <Orders
+                            name={this.state.visitor.name}
+                            phone={this.state.visitor.phone}
+                            orders={this.state.orders}
+                        />
+                    }
+                    />
+                    <Route exact path="/menu" render={() =>
                         <Menu
-                            {...props}
                             orders={this.state.orders}
                             addToOrder={this.addToOrder}
                             loadMenu={this.loadMenu}

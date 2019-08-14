@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import VisitorWindow from "../../components/VisitorWindow/";
+import VisitorWindow from "../../components/VisitorWindow";
 import InfoWindow from "../../components/InfoWindow";
 import { Jumbotron, Container, Row, Col } from "reactstrap";
 import OrderRoute from "../../utils/OrderRoute";
 import VisitorRoute from "../../utils/VisitorRoute";
-import "./visitor.css";
+import "./style.css";
 
 class VisitorOrders extends Component {
     state = {
@@ -14,11 +14,13 @@ class VisitorOrders extends Component {
     };
 
     componentDidMount() {
+        console.log(this.props.phone);
+        console.log(this.props.name);
     }
 
     // Populate the Orders section of the visitor-side site
     loadOrders = () => {
-        OrderRoute.getOrders(this.state._id)
+        OrderRoute.getOrdersByPhone(this.props.phone)
             .then(res => {
                 this.setState({ tempOrder: res.data });
                 this.props.updateOrder(this.state.tempOrder);
@@ -26,28 +28,23 @@ class VisitorOrders extends Component {
             .catch(err => console.log(err));
     };
 
-    // User sign in
-
-    // User sign new
-
-
     render() {
         return (
             <>
-                <Jumbotron>
-                    <h1>Your BIG Order</h1>
-                </Jumbotron>
-                {this.props.phone !== "" ? (
+                <Container>
+                    <h1 className="order-title">Your BIG Order</h1>
+                </Container>
+                {this.props.phone === 0 ? (
                     <Container>
-                        <InfoWindow
-                            name={this.props.name}
-                            phone={this.props.phone}
-                        />
+                        <VisitorWindow.SignIn />
+                        <VisitorWindow.SignNew />
                     </Container>
                 ) : (
                         <Container>
-                            <VisitorWindow.SignIn />
-                            <VisitorWindow.SignNew />
+                            <InfoWindow
+                                name={this.props.name}
+                                phone={this.props.phone}
+                            />
                         </Container>
                     )
                 }

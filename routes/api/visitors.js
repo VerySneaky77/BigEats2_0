@@ -61,7 +61,7 @@ router.put("/orders/:id/:oId", (req, res) => {
 
 // Check visitor information
 // Find by phone
-router.get("/info/:phone", (req, res) => {
+router.get("/orders/:phone", (req, res) => {
   // if there is no associated phone, an empty array will be returned
   db.Visitors
     .find({ phone: req.params.phone })
@@ -70,7 +70,7 @@ router.get("/info/:phone", (req, res) => {
 });
 
 // Create new visitor field
-router.post("/info", (req, res) => {
+router.post("/orders", (req, res) => {
   db.Visitors
     .create(req.body)
     .then(dbModel => res.json(dbModel))
