@@ -50,6 +50,7 @@
 
 .discriptiion{
     font-family: 'Delius Swash Caps', cursive;
+    float: center;
     line-height: 30px;
     font-size: 20px;
 }
