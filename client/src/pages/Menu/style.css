@@ -16,5 +16,10 @@
 
 .menu-title {
     color: white;
-    margin: 30px 0 30px 0
+    margin: 30px 0 30px 0;
+}
+
+.menu-group-header {
+    color: white;
+    margin: 10px 0 10px 0;
 }
