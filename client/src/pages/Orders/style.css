@@ -2,10 +2,10 @@
     display: none;
 };
 
-.order-window {
-    margin: 60px 0 60px 0;
-}
-
 .empty-order {
     padding: auto;
+}
+
+.order-title {
+    color: white;
 }

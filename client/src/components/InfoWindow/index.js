@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 
-function InfoWindow(props) {
+export default function InfoWindow(props) {
     return (
         <Card>
             <CardBody>
@@ -13,5 +13,3 @@ function InfoWindow(props) {
         </Card>
     );
 }
-
-export default InfoWindow;

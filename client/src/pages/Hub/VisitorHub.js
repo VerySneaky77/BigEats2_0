@@ -14,10 +14,9 @@ import Footer from "../../components/Footer";
 class VisitorHub extends Component {
     // This state allows the site to keep temporary track of the user's ordered items
     state = {
-        nameFirst: "",
-        nameLast: "",
+        name: "",
         _id: "",
-        phone: "",
+        phone: 0,
         orders: [],
         items: []
     };
@@ -112,10 +111,16 @@ class VisitorHub extends Component {
                 <Route component={Nav} />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/orders" />
-                    <Route exact path="/menu" render={(props) =>
+                    <Route exact path="/orders" render={() =>
+                        <Orders
+                        name={this.state.name}
+                        phone={this.state.phone}
+                        orders={this.state.orders}
+                        />
+                    }
+                    />
+                    <Route exact path="/menu" render={() =>
                         <Menu
-                            {...props}
                             orders={this.state.orders}
                             addToOrder={this.addToOrder}
                             loadMenu={this.loadMenu}
