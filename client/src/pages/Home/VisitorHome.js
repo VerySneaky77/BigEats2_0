@@ -16,13 +16,13 @@ class VisitorHome extends Component {
                 <div className="carousel-container">
                     <Carousel className="carousel" />
                 </div>
-                <Jumbotron fluid className="tranparent" id="ptag">
+                <Card fluid className="tranparentbox">
                     <Container>
-                        <p>
+                        <h2 className="head-text">
                             The world’s best hot dogs, sausages, burgers and chicken sandwiches, cooked just the way you like it over a glowing bed of real hardwood charcoal.
-                        </p>
+                        </h2>
                     </Container>
-                </Jumbotron>
+                </Card>
                 <Card fluid className="tranparentbox">
                     <Container>
                         <div className="image-box">
