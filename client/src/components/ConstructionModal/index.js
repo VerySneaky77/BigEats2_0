@@ -26,7 +26,7 @@ class ConstructionModal extends React.Component {
                         This space currently under construction. Thank You for your patience.
               </ModalBody>
                     <ModalFooter>
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="secondary" onClick={this.toggle}>OK</Button>
                     </ModalFooter>
                 </Modal>
             </div>
