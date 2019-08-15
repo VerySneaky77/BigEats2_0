@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import VisitorWindow from "../../components/VisitorWindow";
 import InfoWindow from "../../components/InfoWindow";
 import { Jumbotron, Container, Row, Col } from "reactstrap";
+import ConstructionModal from "../../components/ConstructionModal"
 import OrderRoute from "../../utils/OrderRoute";
 import VisitorRoute from "../../utils/VisitorRoute";
 import "./style.css";
@@ -10,7 +11,9 @@ class VisitorOrders extends Component {
     state = {
         items: [],
         tempOrder: [],
-        orderItem: {}
+        orderItem: {},
+        // Under construction
+        construction: true
     };
 
     componentDidMount() {
@@ -31,6 +34,7 @@ class VisitorOrders extends Component {
     render() {
         return (
             <>
+                {this.state.construction ? (<ConstructionModal />) : null}
                 <Container>
                     <h1 className="order-title">Your BIG Order</h1>
                 </Container>
@@ -39,7 +43,7 @@ class VisitorOrders extends Component {
                         <VisitorWindow.SignIn
                             onSignReturnVisitor={this.props.onSignReturnVisitor}
                         />
-                        <VisitorWindow.SignNew 
+                        <VisitorWindow.SignNew
                             onSubmitNewVisitor={this.props.onSubmitNewVisitor}
                         />
                     </Container>
