@@ -10,6 +10,7 @@
     margin: 30px 0 30px 0;
     line-height: 27px;
     padding: 30px;
+    color: black;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 .tranparentbox:hover{
@@ -49,11 +50,12 @@
     position: absolute;    
 } */
 
-.discriptiion{
+.descriptiion{
     font-family: 'Delius Swash Caps', cursive;
     float: center;
     line-height: 30px;
     font-size: 20px;
+    color: black;
 }
 
 .image-box {

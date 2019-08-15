@@ -29,7 +29,7 @@ class VisitorHome extends Component {
                             <Media src={pictures[1]} className="image" fluid />
                         </div>
                         <h1>Our History</h1>
-                        <p className="discriptiion">
+                        <p className="descriptiion">
                             Quis Lorem et pariatur labore anim aute aute cillum sit. Laborum sint est Lorem eu reprehenderit anim cillum. Ad pariatur mollit in exercitation consectetur veniam laborum minim ad voluptate. Sit laboris dolor officia cillum consequat id. Aliquip enim do officia veniam do id occaecat qui Lorem labore deserunt ex dolore. Ex mollit eu eu excepteur officia enim excepteur aliquip magna irure non veniam excepteur.
                         </p>
                     </Container>
