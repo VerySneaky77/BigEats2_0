@@ -108,7 +108,7 @@ class VisitorHub extends Component {
                 <Route component={Nav} />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    {/* <Route exact path="/orders" render={() =>
+                    <Route exact path="/orders" render={() =>
                         <Orders
                             name={this.state.visitor.name}
                             phone={this.state.visitor.phone}
@@ -117,7 +117,7 @@ class VisitorHub extends Component {
                             onSubmitNewVisitor={this.onSubmitNewVisitor}
                         />
                     }
-                    /> */}
+                    />
                     <Route exact path="/menu" render={() =>
                         <Menu
                             orders={this.state.orders}

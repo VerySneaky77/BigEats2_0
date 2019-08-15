@@ -20,7 +20,7 @@ class VisitorNav extends Component {
 
     render() {
         return (
-            <Navbar expand="md" dark className="nav-area">
+            <Navbar color="dark" expand="md" dark className="nav-area">
                 <NavbarBrand href="/">The BIG Eats Eatery</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={!this.state.collapsed} navbar>
