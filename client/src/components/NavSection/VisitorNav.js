@@ -5,16 +5,15 @@ class VisitorNav extends Component {
     constructor(props) {
         super(props);
 
-        this.toggle = this.toggle.bind(this);
-
+        this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
-            isOpen: false
+          collapsed: false
         }
     }
 
-    toggle() {
+    toggleNavbar() {
         this.setState({
-            isOpen: !this.state.isOpen
+            collapsed: !this.state.collapsed
         });
     }
 
@@ -22,8 +21,8 @@ class VisitorNav extends Component {
         return (
             <Navbar color="dark" expand="md" dark className="nav-area">
                 <NavbarBrand href="/">The BIG Eats Eatery</NavbarBrand>
-                <NavbarToggler onClick={this.toggle} />
-                <Collapse isOpen={!this.state.collapsed} navbar>
+                <NavbarToggler onClick={this.toggleNavbar} />
+                <Collapse isOpen={this.state.collapsed} navbar>
                     <Nav className="ml-auto nav-box" navbar>
                         <NavItem><NavLink href="/menu">Menu</NavLink></NavItem>
                         <NavItem><NavLink href="/orders">Order</NavLink></NavItem>
